@@ -1,0 +1,23 @@
+{
+  "name": "grouplist-netflixandchill",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sam-meech-ward-bcit/grouplist-netflixandchill.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sam-meech-ward-bcit/grouplist-netflixandchill/issues"
+  },
+  "homepage": "https://github.com/sam-meech-ward-bcit/grouplist-netflixandchill#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
