@@ -29,8 +29,8 @@ const dbDetails = {
   function createMovie(movie, callback) {
 
     const query = `
-    INSERT INTO movies(Title, Description)
-    VALUES("${movie.Title}","${movie.Description}")
+    INSERT INTO movies(title, description, img, status)
+    VALUES("${movie.title}","${movie.description}", ${movie.img}, ${movie.status})
     `
     console.log(query)
 
@@ -54,10 +54,10 @@ const dbDetails = {
   function updateMovie(id, data, callback) {
     let query  = `
     UPDATE movies
-    SET Title = ?
+    SET title = ?
     WHERE id = ?
     `
-    let params = [data.Title, id]
+    let params = [data.title, id]
 
     connection.query(query, params, (error, result) =>{
       console.log(error,result)
