@@ -10,6 +10,19 @@ const dbDetails = {
 }
 
   const connection = mysql.createConnection(dbDetails)
+
+
+  connection.connect(function(err){
+    if (err) throw err;
+
+    app.get('/', function(req, res){
+      connection.query('SELECT * FROM movies', function(err, data){
+        if (err) throw err;
+        
+        res.json(data)
+      })
+    })
+  })
   
   // 3
   function allMovies(callback) {

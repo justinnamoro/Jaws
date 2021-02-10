@@ -10,21 +10,21 @@ app.listen(port, () => {
   console.log('listening on port ${port}')
 })
 
-app.get('/', (req, res) => {
-  // const movies = database.allMovies()
-  // res.send({
-  //   movies: movies
-  // })
+// app.get('/', (req, res) => {
+//   // const movies = database.allMovies()
+//   // res.send({
+//   //   movies: movies
+//   // })
 
-  database.allMovies((error, movies)=>{
+//   database.allMovies((error, movies)=>{
 
-    if(error) {
-      res.send({error})
-      return
-    }
-    res.send({movies})
-  })
-}) 
+//     if(error) {
+//       res.send({error})
+//       return
+//     }
+//     res.send({movies})
+//   })
+// }) 
 
 app.post('/', (req, res) => {
   // const movie = database.createMovie(req.body)
