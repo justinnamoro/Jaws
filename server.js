@@ -10,7 +10,7 @@ app.listen(port, () => {
   console.log('listening on port ${port}')
 })
 
-app.get('/', (req, res) => {
+app.get('l0ebsc9jituxzmts.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/', (req, res) => {
   // const movies = database.allMovies()
   // res.send({
   //   movies: movies
@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
   })
 }) 
 
-app.post('/', (req, res) => {
+app.post('l0ebsc9jituxzmts.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/', (req, res) => {
   // const movie = database.createMovie(req.body)
   // res.send(movie) 
   const movie = req.body
@@ -44,7 +44,7 @@ app.post('/', (req, res) => {
   })
 })
 app.use(express.json())
-app.patch('/:id', (req, res) => {
+app.patch('l0ebsc9jituxzmts.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/:id', (req, res) => {
   const id = req.params.id
   const movieData = req.body
 
@@ -61,7 +61,7 @@ app.patch('/:id', (req, res) => {
   // res.send(movieData)
 })
 
-app.delete('/:id', (req, res) => {
+app.delete('l0ebsc9jituxzmts.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/:id', (req, res) => {
   const movieId = parseInt(req.params.id)
   const result = database.deleteMovie(movieId)
   res.send(result) 
