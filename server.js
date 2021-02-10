@@ -10,7 +10,7 @@ app.listen(port, () => {
   console.log('listening on port ${port}')
 })
 
-app.get('/api/movies', (req, res) => {
+app.get('/', (req, res) => {
   // const movies = database.allMovies()
   // res.send({
   //   movies: movies
@@ -26,7 +26,7 @@ app.get('/api/movies', (req, res) => {
   })
 }) 
 
-app.post('/api/movies', (req, res) => {
+app.post('/', (req, res) => {
   // const movie = database.createMovie(req.body)
   // res.send(movie) 
   const movie = req.body
@@ -44,7 +44,7 @@ app.post('/api/movies', (req, res) => {
   })
 })
 app.use(express.json())
-app.patch('/api/movies/:id', (req, res) => {
+app.patch('/:id', (req, res) => {
   const id = req.params.id
   const movieData = req.body
 
@@ -61,7 +61,7 @@ app.patch('/api/movies/:id', (req, res) => {
   // res.send(movieData)
 })
 
-app.delete('/api/movies/:id', (req, res) => {
+app.delete('/:id', (req, res) => {
   const movieId = parseInt(req.params.id)
   const result = database.deleteMovie(movieId)
   res.send(result) 
