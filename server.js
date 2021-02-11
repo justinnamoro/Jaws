@@ -7,7 +7,7 @@ app.use('/', function(req, res, next) {
   var origin = req.headers.origin;
 
 //   use this if you want to limit the domain allowed
-  var allowedOrigins = ['http://localhost:3000/', 'http://localhost:6006/'];
+  var allowedOrigins = ['http://localhost:3000/', 'http://localhost:3306/'];
   if(allowedOrigins.indexOf(origin) === -1){
       next();
     return;
